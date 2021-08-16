@@ -1,16 +1,11 @@
 function fibonacci(num){
+    let n = num; 
 
-    let fin = 0;
-    let n = num; //the ammount of cycles the succession has
-    let a = 0;
-    let sum = 1; //the sum of this and the previous number
-
-    while (fin < n){
-        sum += a;
-        a = sum - a;
-        fin++;
-        console.log("fibonacci"+fin+":",sum);
+    if(n < 2){
+        return n;
     }
+    return fibonacci(n-1) + fibonacci(n-2) ;            
+    
 }
 
-fibonacci(41);
+console.log(fibonacci(41));
